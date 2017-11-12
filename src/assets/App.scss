@@ -1,0 +1,15 @@
+@import "./Styles";
+
+body {
+    background-color: #FFF6CA;
+    .header {
+        font-family: $app-font;
+        .header-title {
+            color: $deep-red;
+            font-size: 3rem;
+        }
+        .header-logo {
+            width: 100%;
+        }
+    }
+}
