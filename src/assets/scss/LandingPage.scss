@@ -1,0 +1,15 @@
+@import "./Styles";
+
+.landing {
+    font-family: $app-font;
+    .landing-title {
+        color: $deep-red;
+        font-size: 64px;
+        padding-bottom: 50px;
+    }
+    .landing-logo {
+        .logo {
+            width: 55%;
+        }
+    }
+}

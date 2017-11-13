@@ -1,18 +1,5 @@
 @import "./Styles";
 
 body {
-    background-color: #FFF6CA;
-    .header {
-        font-family: $app-font;
-        .header-title {
-            color: $deep-red;
-            font-size: 64px;
-            padding-bottom: 50px;
-        }
-        .header-logo {
-            .logo {
-                width: 55%;
-            }
-        }
-    }
+    background-color: $light-yellow;
 }
