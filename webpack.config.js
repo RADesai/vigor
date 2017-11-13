@@ -1,7 +1,12 @@
+var path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({template: './public/index.html', filename: 'index.html', inject: 'body'});
+
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'public')
     },
     module: {
         rules: [
@@ -11,22 +16,26 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env', 'es2015', 'react']
+                        presets: ['env', 'react']
                     }
                 }
             }, {
                 test: /\.scss$/,
                 use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader" },
-                    { loader: "sass-loader" }
+                    {
+                        loader: "style-loader"
+                    }, {
+                        loader: "css-loader"
+                    }, {
+                        loader: "sass-loader"
+                    }
                 ]
-            },
-            {
+            }, {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'eslint-loader'
             }
         ]
-    }
+    },
+    plugins: [HtmlWebpackPluginConfig]
 }
