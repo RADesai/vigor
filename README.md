@@ -15,11 +15,20 @@ Want to contribute? Great!
 
 Open your favorite Terminal and run the commands.
 
+open mongodb connection
+```sh
+$ mongod
+```
+
 Develop on http://localhost:3000/
 ```sh
 $ npm start
 ```
 
-### Todos
 
- - Redux
+### Todos
+    - Redux Form for Creating Leagues, Teams, Players
+        - Action/Reducer Implementation
+    - Refactor Routing-Endpoint Methods to controllers
+    - Expand db schema
+    - Testing
